@@ -7,7 +7,7 @@ import contract from "../../public/contracts/NftMarket.json";
 import { NftMarketContract } from "@_types/nftMarketContract";
 
 const NETWORKS = {
-  "5777": "Ganache",
+  "2330": "Ganache",
   "3": "Ropsten"
 }
 
@@ -32,7 +32,7 @@ export function withSession(handler: any) {
 
 const url = process.env.NODE_ENV === "production" ? 
   process.env.INFURA_ROPSTEN_URL : 
-  "http://127.0.0.1:7545";
+  "http://127.0.0.1:8545";
 
 export const addressCheckMiddleware = async (req: NextApiRequest & { session: Session}, res: NextApiResponse) => {
   return new Promise(async (resolve, reject) => {
