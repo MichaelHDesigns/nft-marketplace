@@ -1,6 +1,6 @@
-
-const HDWalletProvider = require("@truffle/hdwallet-provider");
-const keys = require("./keys.json");
+require('dotenv').config();
+const path = require('path');
+const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 module.exports = {
   contracts_build_directory: "./public/contracts",
